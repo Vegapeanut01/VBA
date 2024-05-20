@@ -1,0 +1,57 @@
+//LER ARQUIVOS DENTRO DE UMA PASTA 
+Sub LerPasta()
+    Dim pasta As String
+    Dim arquivo As String
+    Dim linha As Integer
+
+    linha = 1
+    pasta = "C:\Users\Rodrigo\Documents\Livros"
+    'Dir(pasta & "\*.pdf", vbNormal) - mudar o tipo de arquivo
+    'para buscar por um tipo específico 
+    arquivo = Dir(pasta & "\*.pdf", vbNormal)
+
+    Do While arquivo <> ""
+        Cells(linha, 1) = arquivo
+        linha = linha + 1
+        arquivo = Dir
+    Loop
+
+End Sub
+
+
+
+//LER ARQUIVOS DENTRO DE UMA PASTA MAS A PLANILHA PRECISA FICAR DENTRO DA PASTA
+sub LerPasta()
+    Dim pasta As String 
+    Dim arquivo As String 
+    Dim linha As integer
+
+    linha = 1
+    pasta = thisworkbook.path & "\"
+    arquivo = dir(pasta) 
+
+    do while arquivo <> ""
+        cells(linha,1) = arquivo 
+        linha = linha + 1 
+        arquivo = dir
+    loop
+
+end sub
+
+
+//LER ARQUIVOS DENTRO DE UMA PASTA COM UM FOR 
+Sub LoopSaberArquivos()
+    Dim FSO As Object
+    Dim Pasta As Object
+    Dim Arquivo As Object
+    Dim linha As Integer
+
+    Set FSO = CreateObject("Scripting.FileSystemObject")
+
+    Set Pasta = FSO.GetFolder("C:\Users\Rodrigo\Documents\Documentos")
+
+    For Each Arquivo In Pasta.Files
+        Cells(linha + 1, 1) = Arquivo.Name
+        linha = linha + 1
+    Next Arquivo
+End Sub
