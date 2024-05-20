@@ -1,0 +1,40 @@
+sub listar_subpastas(caminhoPasta As String)
+    Dim fso As Object
+    Dim Pasta As Object
+    Dim Arquivo As Object
+    Dim ultimaLinha As Integer
+
+    set fso = createobject("Scripting.FileSystemObject")
+    set Pasta = fso.GetFolder(caminhoPasta)
+
+    for each Arquivo in Pasta.subfolders
+
+        ultimaLinha = sheets("").Cells(cells.rows.count, 1).End(xlUp).row
+
+        Sheets("").cells(ultimaLinha+1, 1).Value = file.Name
+
+        listar_subpastas (file.path)
+    next Arquivo 
+
+end sub 
+
+sub listar_pastas()
+    Dim fso As Object
+    Dim Pasta As Object
+    Dim Arquivo As Object
+    Dim ultimaLinha As Integer
+
+    set fso = createobject("Scripting.FileSystemObject")
+    set Pasta = fso.GetFolder(caminhoPasta)
+
+    for each Arquivo in Pasta.subFolders 
+
+        ultimaLinha = sheets("").Cells(cells.rows.count, 1).End(xlUp).row
+        
+        Sheets("").cells(ultimaLinha+1, 1).Value = file.Name
+
+        listar_subpastas (file.path)
+    
+    next Arquivo
+
+end sub
