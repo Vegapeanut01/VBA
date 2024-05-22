@@ -1,0 +1,10 @@
+//PARA QUANDO SEI O INTERVALO 
+Sub Percorrer()
+    Dim counter As integer 
+    Set CelulaAtual = Cells(counter, 3)
+    'Set CelulaAtual = Worksheets("").cells()
+    'CelulaAtual.Value - pegar o valor da célula atual
+    'Aqui dentro poder ir uma condicional tendo como base
+    'o valor da célula atual (CelulaAtual.value)
+    Next counter
+End Sub 
