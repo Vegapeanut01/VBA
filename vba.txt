@@ -405,3 +405,32 @@ sub LerPasta()
     loop
 
 end sub
+
+//Menu operações
+Sub menuOperacoes()
+    Dim n1, n2, choice, ad, sub, mult, div As integer
+    n1  = InputBox("Digite o primeiro valor: ")
+    n2  = InputBox("Digite o segundo valor: ")
+    MsgBox("1 - Soma de dois números" & vbNewline & "2 - Diferença entre dois números (maior pelo menor)" & vbNewline & "3 - Produto entre dois números" & vbNewline & "4 - Divisão entre dois números (O denominador não pode ser zero)") 
+    choice = InputBox("Digite a opção:")
+
+    if choice = 1 then
+      ad = a+b   
+      MsgBox("Resultado = " & ad)  
+    elseif choice = 2 then
+        if a > b then  
+            sub = a - b
+            MsgBox("Resultado = " & sub)
+        else 
+            sub = b - a 
+            MsgBox("Resultado = " & sub)
+        end if 
+    elseif choice = 3 then 
+        mult = a * b
+        MsgBox("Resultado = " & mult)
+    else 
+        div = a / b
+        MsgBox("Resultado = " & div)
+    end if 
+
+End sub 

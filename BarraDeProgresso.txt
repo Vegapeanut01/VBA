@@ -1,0 +1,39 @@
+
+#Adicionar botão   
+Private Sub commandbutton1_click()
+
+userform1.show
+
+end Sub
+
+private sub userform_activate()
+
+code
+
+end sub 
+
+Sub code()
+
+dim i as integer, j as integer, pccompl as single
+
+sheet1.cells.clear
+
+for i = 1 to 100
+    for j = 1 to 1000
+        cells(i, 1).value = j
+    next j 
+    pctCompl = i
+    progresss = pctCompl
+next i 
+
+end sub
+
+
+sub progress(pctCompl as single)
+
+userform1.text.caption = pccompl & "% completed"
+userform1.bar.width = pccompl * 2
+
+doEvents
+
+end sub
