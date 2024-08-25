@@ -1,3 +1,11 @@
+#Pegar o númeoro de linha preenchidas em uma planilha
+nRows = w.cells(w.rows.Count, 1).End(xlUP).row
+#O loop pode começar a partir da 2° linha 
+For i = 2 to nRows
+Next
+
+
+
 Sub Cria_Matrix()
     Dim matrix() As Integer
     Dim i,j,k,x As Integer 
@@ -538,3 +546,20 @@ Sub unprotected()
         MsgBox "VBA Project is unprotected!", vbInformation, "*****"
     End If
 End Sub
+
+//Quatro Valores
+Sub Quadro_Valores()
+    dim a,b,c,d as Integer 
+    dim x, maior, menor, media As Integer 
+
+    a = inputbox("Digite o primeiro valor")
+    b = inputbox("Digite o primeiro valor")
+    c = inputbox("Digite o primeiro valor")
+    d = inputbox("Digite o primeiro valor")
+
+    if a > b then maior = a 
+        elseif b > maior then maior = b 
+        elseif c > maior then maior = c
+        else maior = d 
+
+End Sub 
