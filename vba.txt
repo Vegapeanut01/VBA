@@ -563,3 +563,75 @@ Sub Quadro_Valores()
         else maior = d 
 
 End Sub 
+
+Sub lista()
+    Dim Justificativa 
+    Justificativa = array("Segunda", "Terça", "Quarta","Quinta","Sexta","Sabado","Domingo")
+    Debug.print Justificativa(2)
+End sub 
+
+
+
+Sub subResposta()
+    dim resposta as String
+    resposta = MsgBox("Tem certeza disso", vbYesNo, "Advertência")
+    if resposta = vbno then 
+        exit sub 
+    else 
+        msgbox "Continuando a macro!" 
+    end if 
+
+End sub 
+
+Sub msgExemple()
+    dim resposta as integer 
+    resposta = msgbox("Selecione OK ou Cancelar", vbOkCancel)
+    'Ve se o botão cancelar foi apertado
+    if resposta = vbCancel then 
+        msgbox "Você selecionou Cancelar"
+    end if
+    if resposta = vbOk then 
+        msgbox "Você selecionou OK"
+    end if  
+end sub
+
+sub Exemple3()
+   if msgbox("Selecione OK para Continuar") = vbOkCancel then end 
+end sub
+
+sub Exemple4()
+   dim resposta as integer
+   resposta = msgbox("Selecione um botão" vbYesNoCancel)
+   'Verifica se o cancelar foi apertado
+   if resposta = vbCancel then
+   msgbox "Você selecionou Cancelar"
+   end if 
+   'Verifica se Sim foi apertado
+   if resposta = vbYes then
+   msgbox "Você selecionou Sim"
+   end if 
+'Verifica se Não foi apertado
+   if resposta = vbNo then
+   msgbox "Você selecionou Não"
+   end if 
+end sub
+
+Sub LongSub()
+    shees("Espera").Visible=True 
+    shees("Espera").Select
+    Application.Cursor = XlWait
+    Application.ScreenUpdating=False
+    'Colocar o procedimento longo
+    Application.Cursor = XlDefault
+    Application.ScreenUpdating=True
+end sub
+
+msgbox "Equipamento N°.   " & numequip & Chr(13) & " Descrição - " & Descriação & Chr(13)_
+& " prazo interno -  " & Format(parteDadData, "ddd-mm")
+
+resposta = msgbox("Deseja continuar?", vbOkCancel, "Continuar")
+'A macro termina se o usuário selecionar o botão Cancel
+if resposta = vbCancel then Exit sub
+
+if msgbox("De)
+if  msgbox("Deseja continuar?", vbOkCancel, "Continuar") = VbCancel then exit Sub
