@@ -9,7 +9,7 @@ Private Sub IsConectar()
     Dim strConexao As String 
     Set gConexao = New ADODB.Connection
     'Define a conexão 
-    strConexao ="Provider=Microsoft.ACE.OLEDB.12.0;DataSource=C:\Users\Rodrigo\Desktop\Jujuba.accdb;Persist Security Infor=False"
+    strConexao ="Provider=Microsoft.ACE.OLEDB.12.0;DataSource=C:\Users\**\Desktop\Jujuba.accdb;Persist Security Infor=False"
 
     gConexao.Open strConexao
 End Sub 
