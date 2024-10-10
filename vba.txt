@@ -634,4 +634,4 @@ resposta = msgbox("Deseja continuar?", vbOkCancel, "Continuar")
 if resposta = vbCancel then Exit sub
 
 if msgbox("De)
-if  msgbox("Deseja continuar?", vbOkCancel, "Continuar") = VbCancel then exit Sub
+        if  msgbox("Deseja continuar?", vbOkCancel, "Continuar") = VbCancel then exit Sub
