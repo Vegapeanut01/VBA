@@ -54,6 +54,7 @@ sub insertEmployee()
     "'"  & sStateProvince & "' ," &_
     "'"  & sZipPostal & "' ," &_
     "'"  & sCountryRegion & "' ," &_
+    ")"
 
     Debug.Print sSQL
 
